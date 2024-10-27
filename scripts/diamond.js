@@ -10,19 +10,15 @@ function palindrome (){
 
     var output = [];
 
+    //pattern of *(1,3,5...)
+
     for(var x = 1; x <= inputRows; x++){
-        for(var y = 1; y <= inputRows - x ; y++)
-            output.push(' ');
-        
-        for(var j = 1; j <= (2 * x - 1); j++)
+        for(var j = 1; j <= (2 * x -1) ; j++)
             output.push('*');
         output.push('\n');
     }
 
     for(var x = inputRows - 1; x >= 1; x--){
-        for(var y = 1; y <= inputRows - x ; y++)
-            output.push(' ');
-        
         for(var j = 1; j <= (2 * x -1); j++)
             output.push('*');
         output.push('\n');
