@@ -32,8 +32,6 @@ function palindrome (){
     outputSec.textContent = output.join('');
 };
 
-
-
 //C++ LOGIC
 /*
  for (int i = 1; i <= rows; i++) {
