@@ -20,22 +20,31 @@ function changeColors()
 
 changeColors();
 
-function palindrome (){
+function palindrome ()
+{
     var inputRows = input.value;
-
     var output = [];
 
-    for(var x = 1; x <= inputRows; x++){
-        for(var j = 1; j <= (2 * x -1) ; j++)
-            output.push('*');
-        output.push('\n');
+    if(inputRows == 0 || inputRows <= 0 || isNaN(inputRows)){
+            outputSec.style.color = 'darkcyan';
+            outputSec.textContent = 'ENTER A NON ZERO NUMBER MATE ;)';
+            setTimeout(() =>{
+                location.reload();
+            }, 1777);
     }
+    else{
+        for(var x = 1; x <= inputRows; x++){
+            for(var j = 1; j <= (2 * x -1) ; j++)
+                output.push('*');
+            output.push('\n');
+        }
 
-    for(var x = inputRows - 1; x >= 1; x--){
-        for(var j = 1; j <= (2 * x -1); j++)
-            output.push('*');
-        output.push('\n');
+        for(var x = inputRows - 1; x >= 1; x--){
+            for(var j = 1; j <= (2 * x -1); j++)
+                output.push('*');
+            output.push('\n');
+        }
+
+        outputSec.textContent = output.join('');
     }
-
-    outputSec.textContent = output.join('');
 };
