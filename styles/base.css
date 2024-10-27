@@ -26,6 +26,10 @@
   gap: 10px;
 }
 
+.inputDiv > h1 {
+  color: darkcyan;
+}
+
 .inputDiv > div > input {
   border-radius: 10px;
   padding: 4px;
