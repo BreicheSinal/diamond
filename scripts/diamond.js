@@ -4,6 +4,22 @@ var outputSec = document.getElementById('outputSection')
 
 enterBttn.addEventListener('click', palindrome);
 
+var colors = ['darkcyan', 'black']
+var index = 0;
+
+function changeColors()
+{
+    outputSec.style.color = colors[index];
+    index++;
+
+    if (index >= colors.length) {
+        index = 0;
+    }
+    setTimeout(changeColors, 700);
+};
+
+changeColors();
+
 function palindrome (){
     var inputRows = input.value;
     console.log(inputRows);
